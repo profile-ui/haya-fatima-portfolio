@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Haya Fatima</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Header Navbar -->
+<header style="background-color: #2A4759; padding: 15px;">
+  <nav style="max-width: 1000px; margin: auto; display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap;">
+    <div style="color: white; font-size: 1.5em; font-weight: bold;">Haya Fatima</div>
+    <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
+      <li><a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a></li>
+      <li><a href="about.html" style="color: white; text-decoration: none; font-weight: bold;">About</a></li>
+      <li><a href="services.html" style="color: white; text-decoration: none; font-weight: bold;">Services</a></li>
+      <li><a href="contact.html" style="color: #F79B72; text-decoration: none; font-weight: bold;">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <h1>Contact Me</h1>
+  <div class="contact-info">
+    <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:+923424464328">+92 342 4464328</a></p>
+    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:hayahere04@gmail.com">hayahere04@gmail.com</a></p>
+    <p><i class="fab fa-instagram"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/_hoor_here_16?igsh=eXV2M3k1c3U2Nzh4" target="_blank">@_hoor_here_16</a></p>
+  </div>
+
+  <!-- Contact Form with Send Options -->
+  <form onsubmit="sendMessage(event)">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+    
+    <div style="margin: 20px 0;">
+      <button type="button" onclick="sendWhatsApp()" class="cta-button bounce">Send via WhatsApp</button>
+      <button type="button" onclick="sendEmail()" class="cta-button bounce">Send via Email</button>
+      <button type="button" onclick="sendInstagram()" class="cta-button bounce">Send via Instagram</button>
+    </div>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Haya Fatima | All rights reserved.</p>
+  <div>
+    <a href="https://wa.me/923424464328" class="footer-link whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="mailto:hayahere04@gmail.com" class="footer-link email"><i class="fas fa-envelope"></i> Email</a>
+    <a href="https://www.instagram.com/_hoor_here_16?igsh=eXV2M3k1c3U2Nzh4" class="footer-link instagram" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+  </div>
+</footer>
+
+<!-- Send Message Script -->
+<script>
+  function sendWhatsApp() {
+    const name = document.getElementById('name').value;
+    const msg = document.getElementById('message').value;
+    const text = `Hi, I'm ${name}. ${msg}`;
+    window.open(`https://wa.me/923424464328?text=${encodeURIComponent(text)}`, '_blank');
+  }
+
+  function sendEmail() {
+    const name = document.getElementById('name').value;
+    const msg = document.getElementById('message').value;
+    const subject = "Message from Portfolio Website";
+    const body = `Hi, I'm ${name}.\n\n${msg}`;
+    window.location.href = `mailto:hayahere04@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
+  function sendInstagram() {
+    window.open("https://www.instagram.com/_hoor_here_16?igsh=eXV2M3k1c3U2Nzh4", '_blank');
+  }
+</script>
+
+</body>
+</html>

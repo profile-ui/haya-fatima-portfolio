@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – Haya Fatima</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .active {
+      text-decoration: underline;
+      color: #F79B72 !important;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Responsive Navbar -->
+<header style="background-color: #2A4759; padding: 15px;">
+  <nav style="max-width: 1000px; margin: auto; text-align: center;">
+    <div style="color: white; font-size: 1.5em; font-weight: bold; margin-bottom: 10px;">
+      Haya Fatima
+    </div>
+    <ul id="nav-links" style="list-style: none; display: flex; justify-content: center; gap: 30px; margin: 0; padding: 0;">
+      <li><a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a></li>
+      <li><a href="about.html" style="color: white; text-decoration: none; font-weight: bold;">About</a></li>
+      <li><a href="services.html" style="color: white; text-decoration: none; font-weight: bold;">Services</a></li>
+      <li><a href="contact.html" style="color: white; text-decoration: none; font-weight: bold;">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- Responsive Menu Script -->
+<script>
+  function toggleMenu() {
+    const links = document.getElementById("nav-links");
+    links.style.display = links.style.display === "flex" ? "none" : "flex";
+  }
+
+  function adjustMenu() {
+    const toggle = document.getElementById("menu-toggle");
+    const links = document.getElementById("nav-links");
+    if (window.innerWidth <= 768) {
+      toggle.style.display = "block";
+      links.style.display = "none";
+      links.style.flexDirection = "column";
+      links.style.backgroundColor = "#2A4759";
+      links.style.padding = "10px";
+    } else {
+      toggle.style.display = "none";
+      links.style.display = "flex";
+      links.style.flexDirection = "row";
+    }
+  }
+
+  window.addEventListener('resize', adjustMenu);
+  window.addEventListener('load', adjustMenu);
+</script>
+
+<!-- Services Section -->
+<div class="services-section">
+  <h1>My Services</h1>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-title">Psychological Counseling</div>
+      <div class="service-desc">Support for depression, anxiety, fears, phobias, and personal growth.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Career Counseling</div>
+      <div class="service-desc">Guidance to help students and professionals find clarity in career decisions.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Motivational Speaking</div>
+      <div class="service-desc">Empowering talks to inspire confidence, discipline, and a positive mindset.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Voice Over Services</div>
+      <div class="service-desc">Professional voiceovers for content, ads, narration, and digital products.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Picture Editing</div>
+      <div class="service-desc">Photo retouching and enhancement with an artistic and personal touch.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Video Editing</div>
+      <div class="service-desc">Editing visuals for reels, vlogs, educational videos, and presentations.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Graphic Design</div>
+      <div class="service-desc">Logos, social media posts, banners, and custom visuals that stand out.</div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
