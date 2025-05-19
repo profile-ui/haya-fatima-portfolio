@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hoor's Grooming Institution</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #F9F6EE, #FDE9D9);
+      color: #2A4759;
+    }
+
+    header {
+      background-color: #2A4759;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      position: relative;
+    }
+
+    header img {
+      height: 50px;
+      position: absolute;
+      left: 20px;
+      top: 15px;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 50px 20px;
+      background: url('https://www.heropatterns.com/static/svg/topography.svg') repeat;
+      background-color: #FDE9D9;
+    }
+
+    .intro h2 {
+      font-size: 2.5rem;
+      color: #2A4759;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 20px auto;
+      color: #444;
+    }
+
+    .courses-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .courses-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #2A4759;
+    }
+
+    .course-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .course-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 25px;
+      width: 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .course-card i {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #F79B72;
+    }
+
+    .course-card h3 {
+      font-size: 1.2rem;
+      color: #2A4759;
+      margin-bottom: 10px;
+    }
+
+    .cta-button {
+      margin: 60px auto 30px;
+      display: block;
+      background-color: #2A4759;
+      color: white;
+      font-weight: bold;
+      padding: 15px 30px;
+      border-radius: 40px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .cta-button:hover {
+      background-color: #1e3543;
+    }
+
+    .contact-section {
+      background-color: #F79B72;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .contact-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 15px;
+      color: white;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="hoorlogo.png" alt="Logo" />
+    Hoor's Grooming Institution
+  </header>
+
+  <section class="intro">
+    <h2>Empower Yourself, Empower Your Future</h2>
+    <p>At Hoor’s Grooming Institution, we offer a variety of courses that empower women with self-confidence, practical skills, and professional development. Join us to grow personally and professionally in a welcoming and inspiring environment.</p>
+  </section>
+
+  <section class="courses-section">
+    <h2>Our Courses</h2>
+    <div class="course-list">
+      <div class="course-card"><i class="fas fa-user"></i><h3>Self-Grooming</h3></div>
+      <div class="course-card"><i class="fas fa-book"></i><h3>English Basic & Advanced</h3></div>
+      <div class="course-card"><i class="fas fa-handshake"></i><h3>Spoken English</h3></div>
+      <div class="course-card"><i class="fas fa-mobile"></i><h3>Skills Development</h3></div>
+      <div class="course-card"><i class="fas fa-computer"></i><h3>Computer Course</h3></div>
+      <div class="course-card"><i class="fas fa-scissors"></i><h3>Hair Styling</h3></div>
+      <div class="course-card"><i class="fas fa-paint-brush"></i><h3>Makeup</h3></div>
+      <div class="course-card"><i class="fas fa-heart"></i><h3>Self-Care Tips</h3></div>
+      <div class="course-card"><i class="fas fa-palette"></i><h3>Henna Designing</h3></div>
+      <div class="course-card"><i class="fas fa-pen-nib"></i><h3>Urdu Writing</h3></div>
+    </div>
+
+    <button class="cta-button" onclick="openWhatsApp()">Take Admission Now</button>
+  </section>
+
+  <section class="contact-section">
+    <h3>Get in Touch</h3>
+    <div class="social-icons">
+      <a href="https://wa.me/923226442544" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:hoorgroominginstitution@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.instagram.com/hoorgroominginstitution?igsh=eXY1OW4xbDdoNjJ5" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <script>
+    function openWhatsApp() {
+      const name = prompt("Please enter your name:");
+      const course = prompt("Which course are you interested in?");
+      if (name && course) {
+        const msg = `Hello, my name is ${name}. I want to take admission in "${course}" course.`;
+        const url = `https://wa.me/923226442544?text=${encodeURIComponent(msg)}`;
+        window.open(url, '_blank');
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,181 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - Haya Fatima</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #EEEEEE;
-      color: #2A4759;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f8f9fa;
     }
-<!-- Responsive Navbar -->
-<header style="background-color: #2A4759; padding: 15px;">
-  <nav style="max-width: 1000px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <div style="color: white; font-size: 1.5em; font-weight: bold;">Haya Fatima</div>
-    
-    <div id="menu-toggle" onclick="toggleMenu()" style="font-size: 1.5em; color: white; cursor: pointer; display: none;">
-      <i class="fas fa-bars"></i>
-    </div>
-    
-    <ul id="nav-links" style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
-      <li><a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a></li>
-      <li><a href="about.html" style="color: white; text-decoration: none; font-weight: bold;">About</a></li>
-      <li><a href="services.html" style="color: white; text-decoration: none; font-weight: bold;">Services</a></li>
-      <li><a href="contact.html" style="color: white; text-decoration: none; font-weight: bold;">Contact</a></li>
-    </ul>
-  </nav>
-</header>
 
-<!-- Responsive Menu Script -->
-<script>
-  function toggleMenu() {
-    const links = document.getElementById("nav-links");
-    links.style.display = links.style.display === "flex" ? "none" : "flex";
-  }
-
-  // Show/hide hamburger icon on small screens
-  function adjustMenu() {
-    const toggle = document.getElementById("menu-toggle");
-    const links = document.getElementById("nav-links");
-    if (window.innerWidth <= 768) {
-      toggle.style.display = "block";
-      links.style.display = "none";
-      links.style.flexDirection = "column";
-      links.style.backgroundColor = "#2A4759";
-      links.style.padding = "10px";
-    } else {
-      toggle.style.display = "none";
-      links.style.display = "flex";
-      links.style.flexDirection = "row";
-    }
-  }
-
-  window.addEventListener('resize', adjustMenu);
-  window.addEventListener('load', adjustMenu);
-</script>
-
-<!-- Font Awesome CDN (for hamburger icon) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    /* Header/Navbar */
     header {
       background-color: #2A4759;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .about-section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #F79B72 !important;
+      font-weight: bold;
     }
 
-    .about-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      margin: 0 12px;
+      transition: all 0.3s ease;
     }
 
-    .about-text {
-      flex: 1;
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      background-color: #fff;
+      color: #2A4759 !important;
+      border-radius: 6px;
+      padding: 6px 12px;
     }
 
-    .about-text h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #F79B72;
-    }
-
-    .about-text p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .about-image {
-      flex: 1;
-      text-align: center;
-    }
-
-    .about-image img {
-      width: 300px;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .back-btn {
-      margin-top: 2rem;
-      display: inline-block;
-      background-color: #F79B72;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .back-btn:hover {
-      background-color: #e98350;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #2A4759;
-      color: white;
-      margin-top: 2rem;
+    .navbar {
+      padding: 1rem 0;
     }
 
     @media (max-width: 768px) {
-      .about-content {
-        flex-direction: column;
+      .navbar-nav {
+        text-align: center;
       }
+    }
 
-      .about-image img {
-        width: 80%;
-      }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .profile-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+      text-align: left;
+    }
+
+    .profile-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .btn-custom {
+      background-color: #F79B72;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #e96d42;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #2A4759;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>About Haya Fatima</h1>
-</header>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand mx-auto" href="#">Haya Fatima</a>
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-<section class="about-section">
-  <div class="about-content">
-    <div class="about-text">
-      <h2>Psychologist & Creative Professional</h2>
-      <p>
-        Haya Fatima is a passionate psychologist who combines traditional therapy techniques with creative expression through art and design. 
-        Her approach focuses on helping clients heal emotionally, grow personally, and discover joy in everyday life.
-      </p>
-      <p>
-        With a commitment to mental well-being and an eye for aesthetics, Haya offers a unique blend of counseling and creative guidance 
-        that supports personal transformation.
-      </p>
-      <a href="index.html" class="back-btn">← Back to Home</a>
+  <!-- About Section -->
+  <section id="about" class="py-5" data-aos="fade-up">
+    <div class="container">
+      <h2 class="mb-4">About <span style="color: #F79B72;">Haya</span></h2>
+      <div class="row justify-content-center">
+        <!-- Profile Card -->
+        <div class="col-md-6 col-lg-5 mb-4" data-aos="fade-right">
+          <div class="profile-card">
+            <img src="haya.jpg" alt="Haya Fatima">
+            <h4>Haya Fatima</h4>
+            <p class="text-muted">Psychologist | Creative Thinker</p>
+            <p>Haya Fatima is a passionate and dedicated psychologist who specializes in helping people overcome emotional struggles and discover their inner strength.</p>
+            <p>With a background in psychology and a love for art, she combines <strong>therapeutic techniques</strong> and <strong>creative expression</strong> to help individuals explore, heal, and grow emotionally.</p>
+            <a href="https://www.instagram.com/_hoor_here_16?igsh=eXV2M3k1c3U2Nzh4" target="_blank" class="btn btn-custom">🌸 Follow on Instagram</a>
+          </div>
+        </div>
+
+        <!-- Highlights -->
+        <div class="col-md-6 col-lg-5 d-flex align-items-center" data-aos="fade-left">
+          <ul class="list-unstyled ps-3">
+            <li class="mb-4">
+              <span style="font-size: 1.2rem; font-weight: bold;">🎨 Creativity meets Healing</span><br>
+              Blending therapy with artistic tools for emotional expression.
+            </li>
+            <li class="mb-4">
+              <span style="font-size: 1.2rem; font-weight: bold;">🧠 Mental Wellness Advocate</span><br>
+              Promotes resilience, confidence, and mental clarity.
+            </li>
+            <li class="mb-4">
+              <span style="font-size: 1.2rem; font-weight: bold;">🌍 Community Support</span><br>
+              Works with individuals and groups to build positive mental health.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="about-image">
-      <img src="haya.jpg" alt="Haya Fatima">
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Haya Fatima. All rights reserved.</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<footer>
-  &copy; 2025 Haya Fatima. All rights reserved.
-</footer>
-
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
